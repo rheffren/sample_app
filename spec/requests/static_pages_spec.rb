@@ -23,4 +23,19 @@ describe "StaticPages" do
       expect(page).to have_content('About Us')
     end
   end
+
+  it "should have the right title" do
+    visit '/static_pages/home'
+    expect(page).to have_title("Ruby on Rails Tutorial Sample App | Home")
+  end
+
+  it "should have the right title" do
+    visit '/static_pages/help'
+    expect(page).to have_title("Help")
+  end
+
+  it "should have the right title" do
+    visit '/static_pages/about'
+    expect(page).to have_title("About")
+  end
 end
